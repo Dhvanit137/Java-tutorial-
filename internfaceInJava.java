@@ -1,28 +1,22 @@
 package javademo;
-import java.io.FileOutputStream;
-import java.io.IOException;
+interface Animal {
+  public void animalSound(); 
+  public void sleep(); 
+}
+
+class Pig implements Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
 
 public class internfaceInJava {
-
-   public static void main(String args[]) throws IOException {  
-      FileInputStream in = null;
-      FileOutputStream out = null;
-
-      try {
-         in = new FileInputStream("input.txt");
-         out = new FileOutputStream("output.txt");
-         
-         int c;
-         while ((c = in.read()) != -1) {
-            out.write(c);
-         }
-      }finally {
-         if (in != null) {
-            in.close();
-         }
-         if (out != null) {
-            out.close();
-         }
-      }
-   }
+  public static void main(String[] args) {
+    Pig myPig = new Pig();
+    myPig.animalSound();
+    myPig.sleep();
+  }
 }
