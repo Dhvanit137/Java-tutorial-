@@ -2,11 +2,11 @@ package javademo;
 
 public class MethodInClass {
 	static void myStaticMethod() {
-		System.out.println("kya bolti public ");
+		System.out.println("hello people ");
 	}
 	
 	public void myPublicMethod() {
-		System.out.println("kya bolte bacha log ");
+		System.out.println("hello world ");
 	}
 	public static void main(String[] args) {
 		myStaticMethod();
